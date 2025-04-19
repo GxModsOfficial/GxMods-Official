@@ -1,46 +1,200 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GxMods Official - Portofolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Dark Mode with Neon Effects */
+        body {
+            background-color: #121212;
+            color: #f1f1f1;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #00ffff;
+            transition: all 0.3s ease-in-out;
+        }
+
+        a:hover {
+            color: #ff00ff;
+            text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+        }
+
+        /* Navbar */
+        nav {
+            background-color: #1c1c1c;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            margin: 0 15px;
+            font-size: 18px;
+            color: #00ffff;
+        }
+
+        nav a:hover {
+            text-shadow: 0 0 5px #00ffff, 0 0 15px #00ffff;
+        }
+
+        /* Profil Picture */
+        .profile img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid #00ffff;
+            transition: all 0.3s ease;
+        }
+
+        .profile img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 15px #00ffff;
+        }
+
+        /* Sections */
+        section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        /* About Section */
+        .about h2 {
+            font-size: 2.5em;
+            color: #ff00ff;
+            text-shadow: 0 0 10px #ff00ff;
+        }
+
+        .about p {
+            font-size: 1.2em;
+            color: #e0e0e0;
+        }
+
+        /* Contact Form */
+        form {
+            background-color: #1a1a1a;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #ff00ff;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 2px solid #00ffff;
+            background-color: #121212;
+            color: #f1f1f1;
+        }
+
+        input[type="submit"] {
+            background-color: #00ffff;
+            border: none;
+            color: #121212;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #ff00ff;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1c1c1c;
+            padding: 20px;
+            text-align: center;
+            color: #f1f1f1;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .profile img {
+                width: 120px;
+                height: 120px;
+            }
+
+            section {
+                padding: 30px 10px;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <div class="container">
-        <aside class="sidebar">
-            <div class="profile">
-                <img src="profile.jpg" alt="Profile Picture" class="profile-img">
-                <h2>Jackson Ford</h2>
-                <p>Designer & Developer</p>
-            </div>
-            <nav class="nav">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Skills</a></li>
-                    <li><a href="#">Experience</a></li>
-                    <li><a href="#">Work</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
-            <footer class="footer">
-                <p>&copy; 2025 Jackson Ford</p>
-                <p>Design by Jackson Ford</p>
-            </footer>
-        </aside>
-        <main class="main-content">
-            <div class="intro">
-                <h1>I am a Designer</h1>
-                <p>100% HTML5 bootstrap templates Made</p>
-                <button>View Portfolio</button>
-            </div>
-            <div class="image">
-                <img src="designer.jpg" alt="Designer Image">
-            </div>
-        </main>
-    </div>
+    <!-- Navbar -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#blog">Blog</a>
+        <a href="#contact">Contact</a>
+        <a href="#credit">Credit</a>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+        <div class="profile">
+            <img src="https://via.placeholder.com/150" alt="Profile Picture">
+        </div>
+        <h1>Welcome to GxMods Official!</h1>
+        <p>Explore the world of MOD APK and more.</p>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>Hello! I am a passionate developer and blogger, dedicated to reviewing and sharing MOD APKs. Follow my journey to discover new apps, hacks, and more!</p>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog">
+        <h2>Blog</h2>
+        <p>Coming soon. Stay tuned for exciting new blog posts!</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <form action="javascript:void(0)">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <input type="submit" value="Send Message">
+        </form>
+    </section>
+
+    <!-- Credit Section -->
+    <section id="credit">
+        <h2>Credit</h2>
+        <p>Special thanks to <a href="https://github.com" target="_blank">GitHub</a> and all contributors!</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 GxMods Official. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Optional JavaScript for interactivity
+        document.querySelector('form').addEventListener('submit', function () {
+            alert('Message sent successfully!');
+        });
+    </script>
 </body>
+
 </html>
