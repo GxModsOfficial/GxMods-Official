@@ -2,254 +2,250 @@
 <html lang="id">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>GxMods Official - Portofolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
-  <style>
-    body {
-      background-color: #121212;
-      color: #f1f1f1;
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      overflow-x: hidden;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GxMods Official - Portofolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Dark Mode with Neon Effects */
+        body {
+            background-color: #121212;
+            color: #f1f1f1;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+        }
 
-    a {
-      text-decoration: none;
-      color: #00ffff;
-      transition: all 0.3s ease-in-out;
-    }
+        a {
+            text-decoration: none;
+            color: #00ffff;
+            transition: all 0.3s ease-in-out;
+        }
 
-    a:hover {
-      color: #ff00ff;
-      text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
-    }
+        a:hover {
+            color: #ff00ff;
+            text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+        }
 
-    nav {
-      background-color: #1c1c1c;
-      padding: 10px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
+        /* Navbar */
+        nav {
+            background-color: #1c1c1c;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-    nav a {
-      margin: 0 15px;
-      font-size: 18px;
-      color: #00ffff;
-      transition: 0.3s ease;
-    }
+        nav a {
+            margin: 0 15px;
+            font-size: 18px;
+            color: #00ffff;
+        }
 
-    nav a:hover {
-      text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
-    }
+        nav a:hover {
+            text-shadow: 0 0 5px #00ffff, 0 0 15px #00ffff;
+        }
 
-    .profile img {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      border: 5px solid #00ffff;
-      transition: all 0.3s ease;
-    }
+        /* Profil Picture */
+        .profile img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid #00ffff;
+            transition: all 0.3s ease;
+        }
 
-    .profile img:hover {
-      transform: scale(1.1);
-      box-shadow: 0 0 15px #00ffff;
-    }
+        .profile img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 15px #00ffff;
+        }
 
-    section {
-      padding: 50px 20px;
-      text-align: center;
-    }
+        /* Sections */
+        section {
+            padding: 50px 20px;
+            text-align: center;
+        }
 
-    .about h2,
-    #blog h2,
-    #contact h2,
-    #credit h2 {
-      font-size: 2.5em;
-      color: #ff00ff;
-      text-shadow: 0 0 10px #ff00ff;
-    }
+        /* About Section */
+        .about h2 {
+            font-size: 2.5em;
+            color: #ff00ff;
+            text-shadow: 0 0 10px #ff00ff;
+        }
 
-    .about p,
-    #blog p,
-    #contact p,
-    #credit p {
-      font-size: 1.2em;
-      color: #e0e0e0;
-    }
+        .about p {
+            font-size: 1.2em;
+            color: #e0e0e0;
+        }
 
-    form {
-      background-color: #1a1a1a;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px #ff00ff;
-      transition: all 0.3s ease;
-      max-width: 500px;
-      margin: 0 auto;
-    }
+        /* Contact Form */
+        form {
+            background-color: #1a1a1a;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #ff00ff;
+        }
 
-    form:hover {
-      transform: scale(1.05);
-    }
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 2px solid #00ffff;
+            background-color: #121212;
+            color: #f1f1f1;
+        }
 
-    input,
-    textarea {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 10px;
-      border-radius: 5px;
-      border: 2px solid #00ffff;
-      background-color: #121212;
-      color: #f1f1f1;
-      transition: all 0.3s ease;
-    }
+        input[type="submit"] {
+            background-color: #00ffff;
+            border: none;
+            color: #121212;
+            font-weight: bold;
+            cursor: pointer;
+        }
 
-    input[type="submit"] {
-      background-color: #00ffff;
-      border: none;
-      color: #121212;
-      font-weight: bold;
-      cursor: pointer;
-    }
+        input[type="submit"]:hover {
+            background-color: #ff00ff;
+        }
 
-    input[type="submit"]:hover {
-      background-color: #ff00ff;
-      text-shadow: 0 0 10px #ff00ff;
-    }
+        /* Footer */
+        footer {
+            background-color: #1c1c1c;
+            padding: 20px;
+            text-align: center;
+            color: #f1f1f1;
+        }
 
-    footer {
-      background-color: #1c1c1c;
-      padding: 20px;
-      text-align: center;
-      color: #f1f1f1;
-      box-shadow: 0 0 10px #00ffff;
-    }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
 
-    @media (max-width: 768px) {
-      nav {
-        flex-direction: column;
-        align-items: flex-start;
-      }
+            .profile img {
+                width: 120px;
+                height: 120px;
+            }
 
-      .profile img {
-        width: 120px;
-        height: 120px;
-      }
+            section {
+                padding: 30px 10px;
+            }
+        }
 
-      section {
-        padding: 30px 10px;
-      }
-    }
+        /* Preloader */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #121212;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-    /* Fade-in effect */
-    .fade-in {
-      opacity: 0;
-      animation: fadeIn 1s ease-out forwards;
-      animation-delay: 0.2s;
-    }
+        .loader {
+            border: 5px solid #222;
+            border-top: 5px solid #00ffff;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+        }
 
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
 
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* Zoom-in effect (optional) */
-    .zoom-in {
-      animation: zoomIn 0.5s ease-in-out;
-    }
-
-    @keyframes zoomIn {
-      0% {
-        transform: scale(0.5);
-      }
-
-      100% {
-        transform: scale(1);
-      }
-    }
-  </style>
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
 </head>
 
-<body class="fade-in">
-  <!-- Navbar -->
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#blog">Blog</a>
-    <a href="#contact">Contact</a>
-    <a href="#credit">Credit</a>
-  </nav>
-
-  <!-- Home Section -->
-  <section id="home" class="zoom-in">
-    <div class="profile">
-      <img src="https://i.imgur.com/0J49WVh.jpeg" alt="Profile Picture" />
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader"></div>
     </div>
-    <h1>Welcome to GxMods Official!</h1>
-    <p>Explore the world of MOD APK and more.</p>
-  </section>
 
-  <!-- About Section -->
-  <section id="about" class="about zoom-in">
-    <h2>About Me</h2>
-    <p>Hello! I am a passionate developer and blogger, dedicated to reviewing and sharing MOD APKs. Follow my journey to discover new apps, hacks, and more!</p>
-  </section>
+    <!-- Navbar -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#blog">Blog</a>
+        <a href="#contact">Contact</a>
+        <a href="#credit">Credit</a>
+    </nav>
 
-  <!-- Blog Section -->
-  <section id="blog" class="zoom-in">
-    <h2>Blog</h2>
-    <p>Coming soon. Stay tuned for exciting new blog posts!</p>
-  </section>
+    <!-- Home Section -->
+    <section id="home">
+        <div class="profile">
+            <img src="https://i.imgur.com/0J49WVh.jpeg" alt="Profile Picture">
+        </div>
+        <h1>Welcome to GxMods Official!</h1>
+        <p>Explore the world of MOD APK and more.</p>
+    </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="zoom-in">
-    <h2>Contact</h2>
-    <form action="javascript:void(0)">
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea placeholder="Your Message" required></textarea>
-      <input type="submit" value="Send Message" />
-    </form>
-  </section>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>Hello! I am a passionate developer and blogger, dedicated to reviewing and sharing MOD APKs. Follow my journey to discover new apps, hacks, and more!</p>
+    </section>
 
-  <!-- Credit Section -->
-  <section id="credit" class="zoom-in">
-    <h2>Credit</h2>
-    <p>Special thanks to <a href="https://github.com" target="_blank">GitHub</a> and all contributors! Also, visit <a href="https://gxmods.bio.link/" target="_blank">GxMods</a> for more.</p>
-  </section>
+    <!-- Blog Section -->
+    <section id="blog">
+        <h2>Blog</h2>
+        <p>Coming soon. Stay tuned for exciting new blog posts!</p>
+    </section>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 GxMods Official. All Rights Reserved.</p>
-  </footer>
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <form action="javascript:void(0)">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <input type="submit" value="Send Message">
+        </form>
+    </section>
 
-  <!-- Background Music -->
-  <audio id="bgm" src="https://www.bensound.com/bensound-music/bensound-sunny.mp3" preload="auto" loop></audio>
+    <!-- Credit Section -->
+    <section id="credit">
+        <h2>Credit</h2>
+        <p>Special thanks to <a href="https://github.com" target="_blank">GitHub</a> and all contributors! Also, visit <a href="https://gxmods.bio.link/" target="_blank">GxMods</a> for more.</p>
+    </section>
 
-  <script>
-    // Play background music on first user interaction
-    const bgm = document.getElementById("bgm");
-    const playAudio = () => {
-      bgm.play().catch(() => {
-        console.warn("Autoplay diblokir, klik untuk memulai.");
-      });
-      document.removeEventListener("click", playAudio);
-    };
-    document.addEventListener("click", playAudio);
-  </script>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 GxMods Official. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Background Music -->
+    <audio id="bgm" src="https://www.bensound.com/bensound-music/bensound-sunny.mp3" preload="auto" loop></audio>
+
+    <script>
+        // After page loads
+        window.addEventListener("load", function () {
+            document.getElementById("preloader").style.display = "none";
+
+            // Play background music on first click
+            const bgm = document.getElementById("bgm");
+            const playAudio = () => {
+                bgm.play().catch(() => {
+                    console.warn("Autoplay diblokir, klik untuk memulai.");
+                });
+                document.removeEventListener("click", playAudio);
+            };
+            document.addEventListener("click", playAudio);
+        });
+    </script>
 </body>
 
 </html>
