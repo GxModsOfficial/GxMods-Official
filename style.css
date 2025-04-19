@@ -81,12 +81,14 @@ nav a {
   padding: 60px 0;
   border-top: 1px solid #333;
 }
+
 .projects .project-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 30px;
   margin-top: 20px;
 }
+
 .project {
   background: #111;
   padding: 20px;
@@ -95,9 +97,35 @@ nav a {
   box-shadow: 0 0 10px #00ffff22;
 }
 
+.project-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #00ffff55;
+  margin-bottom: 20px;
+}
+
+.about-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 20px;
+  box-shadow: 0 0 10px #00ffff55;
+}
+
 footer {
   text-align: center;
   padding: 20px 0;
   background: #111;
   border-top: 1px solid #222;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .hero h2 {
+    font-size: 2em;
+  }
+  .project-list {
+    grid-template-columns: 1fr;
+  }
 }
