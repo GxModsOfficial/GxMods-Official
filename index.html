@@ -178,9 +178,10 @@
     <div style="color: #00ffff; font-size: 24px;">Loading...</div>
   </div>
 
-  <!-- Audio Background -->
-  <audio autoplay loop hidden>
+  <!-- Paksa Audio Play -->
+  <audio id="bg-audio" loop>
     <source src="https://github.com/GxModsOfficial/gxmods-assets/raw/refs/heads/main/203231__raspberrytickle__yandere-laugh.wav" type="audio/mpeg">
+    Browser tidak mendukung audio.
   </audio>
 
   <!-- Navbar -->
@@ -248,9 +249,24 @@
   <script>
     AOS.init();
 
-    // Hide preloader
+    // Hide preloader saat halaman sudah siap
     window.addEventListener("load", () => {
       document.getElementById("preloader").style.display = "none";
+    });
+
+    // Paksa audio play
+    document.addEventListener("DOMContentLoaded", () => {
+      const audio = document.getElementById("bg-audio");
+      audio.volume = 0.5;
+      const playPromise = audio.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(() => {
+          // Jika diblokir, coba paksa lagi saat interaksi user
+          document.body.addEventListener('click', () => {
+            audio.play();
+          }, { once: true });
+        });
+      }
     });
 
     function sendMessage(e) {
@@ -258,8 +274,8 @@
       const name = document.getElementById("name").value;
       const email = document.getElementById("email").value;
       const msg = document.getElementById("message").value;
-      const encodedToken = atob("#");
-      const chatId = "#";
+      const encodedToken = atob("#"); // Ganti dengan token base64 Telegram bot
+      const chatId = "#"; // Ganti dengan ID chat Telegram
       const text = `Pesan baru dari portofolio:\nNama: ${name}\nEmail: ${email}\nPesan: ${msg}`;
 
       fetch(`https://api.telegram.org/bot${encodedToken}/sendMessage`, {
