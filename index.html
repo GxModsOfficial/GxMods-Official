@@ -1,44 +1,72 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>GxMods Official</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GxMods Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>👾 GxMods Official</h1>
-    <nav>
-      <ul>
-        <li><a href="#beranda">Beranda</a></li>
-        <li><a href="#tentang">Tentang</a></li>
-        <li><a href="#kontak">Kontak</a></li>
-        <li><a href="https://gxmods-apkmod.blogspot.com/" target="_blank">🌐 Blog Utama</a></li>
-      </ul>
-    </nav>
+    <div class="container">
+      <h1 class="logo">GxMods</h1>
+      <nav>
+        <a href="#about">Tentang</a>
+        <a href="#projects">Proyek</a>
+        <a href="#contact">Kontak</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <section id="beranda">
-      <h2>Selamat Datang</h2>
-      <p>Ini adalah tempat untuk download aplikasi MOD. Geser ke bawah untuk melihat daftar.</p>
-      <a href="https://gxmods-apkmod.blogspot.com/" class="btn-neon">Kunjungi Blog Terbaru</a>
-    </section>
+  <section class="hero">
+    <div class="container">
+      <h2>👋 Hai, Saya GxMods</h2>
+      <p>Saya membuat aplikasi MOD APK dan sistem custom untuk Blogger.</p>
+      <a href="#projects" class="btn">Lihat Proyek</a>
+    </div>
+  </section>
 
-    <section id="video">
-      <h2>📺 Preview Video</h2>
-      <div class="video-container">
-        <!-- Tambahkan embed video manual di sini -->
+  <section id="about" class="about">
+    <div class="container">
+      <h3>Tentang Saya</h3>
+      <p>Saya adalah developer web yang fokus pada MOD APK, sistem komentar Firebase, dan fitur HTML custom di Blogger. Saya juga aktif mengembangkan tools seperti APK Card Generator dan sistem spinner neon untuk situs APK MOD.</p>
+    </div>
+  </section>
+
+  <section id="projects" class="projects">
+    <div class="container">
+      <h3>Proyek Terbaru</h3>
+      <div class="project-list">
+        <div class="project">
+          <h4>APK Card Generator</h4>
+          <p>Generator HTML otomatis untuk postingan MOD APK di Blogger.</p>
+        </div>
+        <div class="project">
+          <h4>Offline Detector</h4>
+          <p>Fitur offline mode lengkap dengan animasi dan suara.</p>
+        </div>
+        <div class="project">
+          <h4>MOD Request Form</h4>
+          <p>Form responsif dengan emoji unicode dan simpan data localStorage.</p>
+        </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
-  <footer id="kontak">
-    <p>© 2025 GxMods Official</p>
+  <section id="contact" class="contact">
+    <div class="container">
+      <h3>Kontak Saya</h3>
+      <p>Email: <a href="mailto:gxmodsdev@gmail.com">gxmodsdev@gmail.com</a></p>
+      <p>Telegram: <a href="https://t.me/GxMods" target="_blank">@GxMods</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 GxMods Official. All rights reserved.</p>
+    </div>
   </footer>
 
-  <script src="assets/js/script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
